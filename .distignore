@@ -1,3 +1,4 @@
 tests
 .distignore
 .gitignore
+.wordpress-org
