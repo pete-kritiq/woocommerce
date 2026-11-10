@@ -23,13 +23,13 @@ KRITIQ scores your video ads before you spend, then shows how each one performed
 
 == External services ==
 
-This plugin connects to KRITIQ (https://www.kritiq.app), operated by KRITIQ (Pty) Ltd, South Africa.
+This plugin connects to KRITIQ (https://kritiq.app), operated by KRITIQ (Pty) Ltd, South Africa.
 
-* **The KRITIQ pixel script** (https://www.kritiq.app/kq.js) is loaded on your store's pages for visitors, except shop managers. After the visitor consents (when consent is required, the default), it sends the event name, page URL without query string, referrer, ad click parameters (utm_source, utm_medium, utm_campaign, kq_ad, and whether fbclid, ttclid or gclid was present), an anonymous random browser ID, and for purchases the order value, currency and order number, to https://www.kritiq.app/api/pixel/collect.
-* **Server-side purchases** (only when your store is connected and the visitor consented): when an order is paid, your server sends the order value, currency, order number, and the visitor's anonymous browser ID and ad click to https://www.kritiq.app/api/stores/events.
-* **Connecting your store** sends your store's domain, name and currency to https://www.kritiq.app/connect/store, and your admin's browser signs in there. Your server then exchanges a one-time code at https://www.kritiq.app/api/stores/token and reads connection status from https://www.kritiq.app/api/stores/me.
+* **The KRITIQ pixel script** (https://kritiq.app/kq.js) is loaded on your store's pages for visitors, except shop managers. After the visitor consents (when consent is required, the default), it sends the event name, page URL without query string, referrer, ad click parameters (utm_source, utm_medium, utm_campaign, kq_ad, and whether fbclid, ttclid or gclid was present), an anonymous random browser ID, and for purchases the order value, currency and order number, to https://kritiq.app/api/pixel/collect.
+* **Server-side purchases** (only when your store is connected and the visitor consented): when an order is paid, your server sends the order value, currency, order number, and the visitor's anonymous browser ID and ad click to https://kritiq.app/api/stores/events.
+* **Connecting your store** sends your store's domain, name and currency to https://kritiq.app/connect/store, and your admin's browser signs in there. Your server then exchanges a one-time code at https://kritiq.app/api/stores/token and reads connection status from https://kritiq.app/api/stores/me.
 
-Privacy policy: https://www.kritiq.app/legal/privacy · Terms: https://www.kritiq.app/legal/terms
+Privacy policy: https://kritiq.app/legal/privacy · Terms: https://kritiq.app/legal/terms
 
 You are responsible for telling your visitors about this in your cookie notice and privacy policy.
 

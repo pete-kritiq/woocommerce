@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name:       KRITIQ Pixel for WooCommerce
- * Plugin URI:        https://www.kritiq.app
+ * Plugin URI:        https://kritiq.app
  * Description:       Connects your store to KRITIQ and sends consent-aware ecommerce events (page views, product views, add to cart, checkout, purchases) to your KRITIQ pixel, so you can see what your ads and creatives do on your site.
  * Version:           1.0.0
  * Requires at least: 6.2
  * Requires PHP:      7.4
  * Author:            KRITIQ
- * Author URI:        https://www.kritiq.app
+ * Author URI:        https://kritiq.app
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       kritiq-pixel

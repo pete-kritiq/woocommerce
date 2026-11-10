@@ -10,13 +10,13 @@ const WOO = fs.readFileSync(process.argv[2], 'utf8');
   const browser = await chromium.launch();
   const page = await browser.newPage();
   const sent = [];
-  await page.route('https://www.kritiq.app/kq.js', (r) => r.fulfill({ contentType: 'text/javascript', body: KQ }));
-  await page.route('https://www.kritiq.app/api/pixel/collect', async (r) => { sent.push(JSON.parse(r.request().postData())); await r.fulfill({ status: 204 }); });
+  await page.route('https://kritiq.app/kq.js', (r) => r.fulfill({ contentType: 'text/javascript', body: KQ }));
+  await page.route('https://kritiq.app/api/pixel/collect', async (r) => { sent.push(JSON.parse(r.request().postData())); await r.fulfill({ status: 204 }); });
   await page.route('https://shop.example.com/**', async (r) => {
     const u = new URL(r.request().url());
     if (u.searchParams.get('wc-ajax') === 'kritiq_events') return r.fulfill({ contentType: 'application/json', body: JSON.stringify({ events: [{ e: 'AddToCart', v: 998, c: 'ZAR' }] }) });
     if (u.pathname === '/kritiq-woo.js') return r.fulfill({ contentType: 'text/javascript', body: WOO });
-    const cfg = { pixelId: 'KQ-ABCDEFGH23', src: 'https://www.kritiq.app/kq.js', requireConsent: true, consentMode: 'auto', eventsUrl: '/?wc-ajax=kritiq_events',
+    const cfg = { pixelId: 'KQ-ABCDEFGH23', src: 'https://kritiq.app/kq.js', requireConsent: true, consentMode: 'auto', eventsUrl: '/?wc-ajax=kritiq_events',
       events: [{ e: 'Purchase', v: 1299.5, c: 'ZAR', oid: '1001' }] };
     return r.fulfill({ contentType: 'text/html', body: `<!doctype html><html><head>
       <script>var __consent=false; window.wp_has_consent=function(){return __consent};</script>

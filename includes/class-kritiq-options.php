@@ -45,7 +45,7 @@ class Kritiq_Options {
 
 	/** Base URL of KRITIQ. Filterable so a staging app can be used for testing. */
 	public static function app_url() {
-		return untrailingslashit( apply_filters( 'kritiq_pixel_app_url', 'https://www.kritiq.app' ) );
+		return untrailingslashit( apply_filters( 'kritiq_pixel_app_url', 'https://kritiq.app' ) );
 	}
 
 	/** Same rule as the KRITIQ collector: letters, digits and _.:- only, so browser and server order IDs match. */
